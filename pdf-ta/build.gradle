@@ -11,7 +11,7 @@ dependencies {
   testCompile flexoFoundationTest()
   
   // Test resource center
-   testRuntime project(':pdfconnector-test-rc') 
+   testRuntime project(':pdf-ta-test-rc') 
 }
 task nonuiTest(type: Test) {
   ignoreFailures = true
