@@ -49,7 +49,7 @@ import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResourceFactory;
 
 @DeclareModelSlots({ PDFModelSlot.class })
 @DeclareResourceTypes({ PDFDocumentResourceFactory.class })
-public class PDFTechnologyAdapter extends TechnologyAdapter {
+public class PDFTechnologyAdapter extends TechnologyAdapter<PDFTechnologyAdapter> {
 
 	protected static final Logger logger = Logger.getLogger(PDFTechnologyAdapter.class.getPackage().getName());
 
