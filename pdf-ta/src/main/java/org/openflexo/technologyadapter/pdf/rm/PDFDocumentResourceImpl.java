@@ -142,7 +142,7 @@ public abstract class PDFDocumentResourceImpl extends PamelaResourceImpl<PDFDocu
 	@Override
 	public PDFDocument getDocument() {
 		try {
-			return getResourceData(null);
+			return getResourceData();
 		} catch (ResourceLoadingCancelledException e) {
 			e.printStackTrace();
 			return null;

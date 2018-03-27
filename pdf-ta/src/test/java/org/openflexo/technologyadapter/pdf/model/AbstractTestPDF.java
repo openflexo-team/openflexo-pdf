@@ -109,7 +109,7 @@ public abstract class AbstractTestPDF extends OpenflexoProjectAtRunTimeTestCase 
 
 		PDFDocument document = null;
 		try {
-			document = documentResource.getResourceData(null);
+			document = documentResource.getResourceData();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
