@@ -58,14 +58,12 @@ public class MyPageDrawer extends PageDrawer {
 
 	@Override
 	protected void processType3Stream(PDType3CharProc charProc, Matrix textRenderingMatrix) throws IOException {
-		// TODO Auto-generated method stub
 		super.processType3Stream(charProc, textRenderingMatrix);
 		// System.out.println("processType3Stream " + textRenderingMatrix);
 	}
 
 	@Override
 	protected void processTransparencyGroup(PDTransparencyGroup group) throws IOException {
-		// TODO Auto-generated method stub
 		super.processTransparencyGroup(group);
 		// System.out.println("processTransparencyGroup " + group);
 		// Unused PDStream stream =
@@ -115,7 +113,6 @@ public class MyPageDrawer extends PageDrawer {
 
 	@Override
 	protected void showGlyph(Matrix textRenderingMatrix, PDFont font, int code, String unicode, Vector displacement) throws IOException {
-		// TODO Auto-generated method stub
 		super.showGlyph(textRenderingMatrix, font, code, unicode, displacement);
 		// System.out.println(unicode);
 	}

@@ -83,7 +83,6 @@ public class TestLoadPDF3 extends AbstractTestPDF {
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}

@@ -169,7 +169,6 @@ public interface PDFDocumentPage extends TechnologyObject<PDFTechnologyAdapter>,
 				textBoxes = textBoxStripper.extractTextBoxes();
 
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -178,7 +177,6 @@ public interface PDFDocumentPage extends TechnologyObject<PDFTechnologyAdapter>,
 				PDFImageBoxStripper imageBoxStripper = new PDFImageBoxStripper(pdDocument, pdPage);
 				imageBoxes = imageBoxStripper.extractImageBoxes();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -363,7 +361,6 @@ public interface PDFDocumentPage extends TechnologyObject<PDFTechnologyAdapter>,
 		@Override
 		protected void finalize() throws Throwable {
 			System.out.println("************************************** PDFPageImp has been cleaned / GC.. ********************");
-			// TODO Auto-generated method stub
 			super.finalize();
 		}
 

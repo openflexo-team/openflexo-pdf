@@ -78,13 +78,11 @@ public class PDFTechnologyAdapter extends TechnologyAdapter<PDFTechnologyAdapter
 
 	@Override
 	public TechnologyAdapterBindingFactory getTechnologyAdapterBindingFactory() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public <I> boolean isIgnorable(FlexoResourceCenter<I> resourceCenter, I contents) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

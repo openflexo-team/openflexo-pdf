@@ -75,7 +75,6 @@ public class PDFPageDrawing extends DrawingImpl<PDFDocumentPage> {
 		try {
 			FACTORY = new DianaModelFactoryImpl();
 		} catch (ModelDefinitionException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

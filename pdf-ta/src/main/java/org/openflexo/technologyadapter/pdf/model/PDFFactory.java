@@ -113,7 +113,6 @@ public class PDFFactory extends ModelFactory implements PamelaResourceModelFacto
 		try {
 			document.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block ==> check if its dangerous
 			e.printStackTrace();
 		}
 		return returned;

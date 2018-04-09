@@ -39,7 +39,6 @@ public class PDFTextBoxStripper extends PDFTextStripperByArea {
 		try {
 			extractRegions(page);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return textBoxes;

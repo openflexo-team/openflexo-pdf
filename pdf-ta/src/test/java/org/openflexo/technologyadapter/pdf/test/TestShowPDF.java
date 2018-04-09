@@ -116,7 +116,6 @@ public class TestShowPDF extends AbstractTestPDF {
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -130,7 +129,6 @@ public class TestShowPDF extends AbstractTestPDF {
 			try {
 				getContentPane().add(new PagePanel(document, page));
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			setTitle(name);
@@ -329,7 +327,6 @@ public class TestShowPDF extends AbstractTestPDF {
 
 			@Override
 			public void paint(Graphics g) {
-				// TODO Auto-generated method stub
 				super.paint(g);
 
 				for (PDFormXObject o : formObjects) {

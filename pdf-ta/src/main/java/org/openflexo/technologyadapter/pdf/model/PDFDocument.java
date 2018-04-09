@@ -119,7 +119,6 @@ public interface PDFDocument extends TechnologyObject<PDFTechnologyAdapter>, Res
 
 		@Override
 		public LocalizedDelegate getLocales() {
-			// TODO Auto-generated method stub
 			return super.getLocales();
 		}
 
