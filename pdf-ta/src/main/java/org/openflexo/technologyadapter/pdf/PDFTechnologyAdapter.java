@@ -62,7 +62,7 @@ public class PDFTechnologyAdapter extends TechnologyAdapter<PDFTechnologyAdapter
 	}
 
 	@Override
-	public String getLocalizationDirectory() {
+	protected String getLocalizationDirectory() {
 		return "FlexoLocalization/PDFTechnologyAdapter";
 	}
 
