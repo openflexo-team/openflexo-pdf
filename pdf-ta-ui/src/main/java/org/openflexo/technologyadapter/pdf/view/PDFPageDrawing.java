@@ -54,7 +54,7 @@ import org.openflexo.diana.GRProvider.DrawingGRProvider;
 import org.openflexo.diana.GRProvider.ShapeGRProvider;
 import org.openflexo.diana.impl.DrawingImpl;
 import org.openflexo.diana.shapes.ShapeSpecification.ShapeType;
-import org.openflexo.model.exceptions.ModelDefinitionException;
+import org.openflexo.pamela.exceptions.ModelDefinitionException;
 import org.openflexo.technologyadapter.pdf.model.ImageBox;
 import org.openflexo.technologyadapter.pdf.model.PDFDocumentPage;
 import org.openflexo.technologyadapter.pdf.model.TextBox;

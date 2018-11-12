@@ -33,7 +33,7 @@ import org.openflexo.foundation.resource.SaveResourceException;
 import org.openflexo.foundation.technologyadapter.TechnologyAdapter;
 import org.openflexo.foundation.technologyadapter.TechnologyAdapterBindingFactory;
 import org.openflexo.foundation.technologyadapter.TechnologyAdapterInitializationException;
-import org.openflexo.model.exceptions.ModelDefinitionException;
+import org.openflexo.pamela.exceptions.ModelDefinitionException;
 import org.openflexo.technologyadapter.pdf.rm.PDFDocumentRepository;
 import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResource;
 import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResourceFactory;

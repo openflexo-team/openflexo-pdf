@@ -26,7 +26,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.openflexo.foundation.resource.FlexoResourceCenter;
 import org.openflexo.foundation.resource.TechnologySpecificPamelaResourceFactory;
 import org.openflexo.foundation.technologyadapter.TechnologyContextManager;
-import org.openflexo.model.exceptions.ModelDefinitionException;
+import org.openflexo.pamela.exceptions.ModelDefinitionException;
 import org.openflexo.technologyadapter.pdf.PDFTechnologyAdapter;
 import org.openflexo.technologyadapter.pdf.model.PDFDocument;
 import org.openflexo.technologyadapter.pdf.model.PDFFactory;
