@@ -24,7 +24,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -131,14 +130,6 @@ public abstract class PDFDocumentResourceImpl extends PamelaResourceImpl<PDFDocu
 		System.out.println("Wrote : " + getIODelegate().getSerializationArtefact());
 	}
 
-	private static void makeLocalCopy(File file) throws IOException {
-		if (file != null && file.exists()) {
-			String localCopyName = file.getName() + "~";
-			File localCopy = new File(file.getParentFile(), localCopyName);
-			FileUtils.copyFileToFile(file, localCopy);
-		}
-	}
-
 	@Override
 	public PDFDocument getDocument() {
 		try {
@@ -158,20 +149,6 @@ public abstract class PDFDocumentResourceImpl extends PamelaResourceImpl<PDFDocu
 	@Override
 	public Class<PDFDocument> getResourceDataClass() {
 		return PDFDocument.class;
-	}
-
-	public InputStream getInputStream() {
-		if (getFlexoIOStreamDelegate() != null) {
-			return getFlexoIOStreamDelegate().getInputStream();
-		}
-		return null;
-	}
-
-	public OutputStream getOutputStream() {
-		if (getFlexoIOStreamDelegate() != null) {
-			return getFlexoIOStreamDelegate().getOutputStream();
-		}
-		return null;
 	}
 
 }
