@@ -41,14 +41,14 @@ public class PDFDocumentResourceFactory
 
 	private static final Logger logger = Logger.getLogger(PDFDocumentResourceFactory.class.getPackage().getName());
 
-	public static String PDF_FILE_EXTENSION = "pdf";
+	public static final String PDF_FILE_EXTENSION = "pdf";
 
 	public PDFDocumentResourceFactory() throws ModelDefinitionException {
 		super(PDFDocumentResource.class);
 	}
 
 	@Override
-	public PDFFactory makeResourceDataFactory(PDFDocumentResource resource,
+	public PDFFactory makeModelFactory(PDFDocumentResource resource,
 			TechnologyContextManager<PDFTechnologyAdapter> technologyContextManager) throws ModelDefinitionException {
 		return new PDFFactory(resource, technologyContextManager.getServiceManager().getEditingContext());
 	}
