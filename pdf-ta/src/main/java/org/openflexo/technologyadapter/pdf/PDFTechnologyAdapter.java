@@ -25,7 +25,7 @@ import java.util.logging.Logger;
 
 import org.openflexo.foundation.FlexoProject;
 import org.openflexo.foundation.fml.annotations.DeclareModelSlots;
-import org.openflexo.foundation.fml.annotations.DeclareResourceFactory;
+import org.openflexo.foundation.fml.annotations.DeclareResourceFactories;
 import org.openflexo.foundation.resource.FileSystemBasedResourceCenter;
 import org.openflexo.foundation.resource.FlexoResourceCenter;
 import org.openflexo.foundation.resource.FlexoResourceCenterService;
@@ -48,7 +48,7 @@ import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResourceFactory;
  */
 
 @DeclareModelSlots({ PDFModelSlot.class })
-@DeclareResourceFactory({ PDFDocumentResourceFactory.class })
+@DeclareResourceFactories({ PDFDocumentResourceFactory.class })
 public class PDFTechnologyAdapter extends TechnologyAdapter<PDFTechnologyAdapter> {
 
 	protected static final Logger logger = Logger.getLogger(PDFTechnologyAdapter.class.getPackage().getName());
