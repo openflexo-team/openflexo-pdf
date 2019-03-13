@@ -31,10 +31,9 @@ import org.openflexo.pamela.annotations.XMLElement;
 import org.openflexo.technologyadapter.pdf.model.PDFDocument;
 
 /**
- * Implementation of the ModelSlot class for the DOCX technology adapter<br>
- * We expect here to connect an .docx document<br>
+ * Implementation of the ModelSlot class for the PDF technology adapter<br>
+ * We expect here to connect an .pdf document<br>
  * 
- * We might here supply a template document, which might be used as a "metamodel" to help manage connected document
  * 
  * @author sylvain
  * 
