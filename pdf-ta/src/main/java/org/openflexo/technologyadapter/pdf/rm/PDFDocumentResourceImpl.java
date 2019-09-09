@@ -58,7 +58,7 @@ public abstract class PDFDocumentResourceImpl extends PamelaResourceImpl<PDFDocu
 	}
 
 	@Override
-	protected void _saveResourceData(boolean clearIsModified) throws SaveResourceException {
+	protected void performSave(boolean clearIsModified) throws SaveResourceException {
 
 		if (getFlexoIOStreamDelegate() == null) {
 			throw new SaveResourceException(getIODelegate());
