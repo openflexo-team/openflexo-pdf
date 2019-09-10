@@ -15,24 +15,28 @@ import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
 import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.junit.Assume;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.openflexo.foundation.resource.StreamIODelegate;
 import org.openflexo.technologyadapter.pdf.model.AbstractTestPDF;
 import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResource;
 import org.openflexo.test.OrderedRunner;
 import org.openflexo.test.TestOrder;
+import org.openflexo.test.UITest;
 
 @RunWith(OrderedRunner.class)
 public class TestLoadPDF3 extends AbstractTestPDF {
 
 	@Test
 	@TestOrder(1)
+	@Category(UITest.class)
 	public void testInitializeServiceManager() throws Exception {
 		instanciateTestServiceManagerForPDF();
 	}
 
 	@Test
 	@TestOrder(2)
+	@Category(UITest.class)
 	public void loadImages() throws IOException {
 
 		PDFDocumentResource docResource = getDocumentResource("EH200052_MAXITAB Regular_5kg.pdf");
