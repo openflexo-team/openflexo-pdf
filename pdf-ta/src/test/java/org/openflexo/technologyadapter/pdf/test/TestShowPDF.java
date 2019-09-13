@@ -35,9 +35,11 @@ import org.apache.pdfbox.text.TextPosition;
 import org.junit.Assume;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.openflexo.foundation.resource.StreamIODelegate;
 import org.openflexo.technologyadapter.pdf.model.AbstractTestPDF;
 import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResource;
+import org.openflexo.test.UITest;
 
 public class TestShowPDF extends AbstractTestPDF {
 
@@ -68,6 +70,7 @@ public class TestShowPDF extends AbstractTestPDF {
 	}
 
 	@Test
+	@Category(UITest.class)
 	public void showFile1() throws IOException {
 		loadAndDisplayDocument("EH200052_MAXITAB Regular_5kg.pdf", getPDDocument("EH200052_MAXITAB Regular_5kg.pdf"));
 	}
