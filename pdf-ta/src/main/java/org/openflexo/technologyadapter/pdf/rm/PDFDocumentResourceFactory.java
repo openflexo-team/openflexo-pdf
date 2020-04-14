@@ -65,7 +65,7 @@ public class PDFDocumentResourceFactory
 	}
 
 	@Override
-	protected <I> PDFDocumentResource registerResource(PDFDocumentResource resource, FlexoResourceCenter<I> resourceCenter) {
+	public <I> PDFDocumentResource registerResource(PDFDocumentResource resource, FlexoResourceCenter<I> resourceCenter) {
 
 		super.registerResource(resource, resourceCenter);
 
