@@ -1,10 +1,12 @@
 dependencies {
-  compile project(":pdf-ta")
+  implementation project(":pdf-ta")
 
   // openflexo dep
-  compile flexoUi()
+  implementation dianaSwing()
+  implementation diana()
+  implementation flexoUi()
   // external dep
 
   // testing dep
-  testCompile flexoUiTest()
+  testImplementation flexoUiTest()
 }
