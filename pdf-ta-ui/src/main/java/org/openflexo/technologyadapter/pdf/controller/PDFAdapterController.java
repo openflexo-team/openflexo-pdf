@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import javax.swing.ImageIcon;
 
+import org.openflexo.foundation.FlexoObject;
 import org.openflexo.foundation.fml.FlexoRole;
 import org.openflexo.foundation.fml.editionaction.EditionAction;
 import org.openflexo.foundation.technologyadapter.TechnologyObject;
@@ -132,7 +133,20 @@ public class PDFAdapterController extends TechnologyAdapterController<PDFTechnol
 	}
 
 	@Override
-	public ModuleView<?> createModuleViewForObject(TechnologyObject<PDFTechnologyAdapter> object, FlexoController controller,
+	public boolean isRepresentableInModuleView(TechnologyObject<PDFTechnologyAdapter> object) {
+		return object instanceof PDFDocument;
+	}
+
+	@Override
+	public FlexoObject getRepresentableMasterObject(TechnologyObject<PDFTechnologyAdapter> object) {
+		if (object instanceof PDFDocument) {
+			return object;
+		}
+		return null;
+	}
+	
+	@Override
+	public ModuleView<?> createModuleViewForMasterObject(TechnologyObject<PDFTechnologyAdapter> object, FlexoController controller,
 			FlexoPerspective perspective) {
 		if (object instanceof PDFDocument) {
 			return new PDFDocumentModuleView((PDFDocument) object, perspective);
@@ -163,14 +177,6 @@ public class PDFAdapterController extends TechnologyAdapterController<PDFTechnol
 			return ((PDFDocument) object).getName();
 		}
 		return null;
-	}
-
-	@Override
-	public boolean hasModuleViewForObject(TechnologyObject<PDFTechnologyAdapter> object, FlexoController controller) {
-		if (object instanceof PDFDocument) {
-			return true;
-		}
-		return false;
 	}
 
 	@Override
