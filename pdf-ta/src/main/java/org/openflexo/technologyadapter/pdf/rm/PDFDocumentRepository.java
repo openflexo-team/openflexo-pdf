@@ -24,7 +24,7 @@ import org.openflexo.foundation.resource.FlexoResourceCenter;
 import org.openflexo.foundation.technologyadapter.TechnologyAdapterResourceRepository;
 import org.openflexo.pamela.annotations.ModelEntity;
 import org.openflexo.pamela.exceptions.ModelDefinitionException;
-import org.openflexo.pamela.factory.ModelFactory;
+import org.openflexo.pamela.factory.PamelaModelFactory;
 import org.openflexo.technologyadapter.pdf.PDFTechnologyAdapter;
 import org.openflexo.technologyadapter.pdf.model.PDFDocument;
 
@@ -34,9 +34,9 @@ public interface PDFDocumentRepository<I>
 
 	public static <I> PDFDocumentRepository<I> instanciateNewRepository(PDFTechnologyAdapter technologyAdapter,
 			FlexoResourceCenter<I> resourceCenter) {
-		ModelFactory factory;
+		PamelaModelFactory factory;
 		try {
-			factory = new ModelFactory(PDFDocumentRepository.class);
+			factory = new PamelaModelFactory(PDFDocumentRepository.class);
 			PDFDocumentRepository<I> newRepository = factory.newInstance(PDFDocumentRepository.class);
 			newRepository.setTechnologyAdapter(technologyAdapter);
 			newRepository.setResourceCenter(resourceCenter);

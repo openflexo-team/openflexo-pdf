@@ -46,11 +46,11 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import org.openflexo.foundation.PamelaResourceModelFactory;
 import org.openflexo.foundation.action.FlexoUndoManager;
 import org.openflexo.foundation.resource.PamelaResourceImpl.IgnoreLoadingEdits;
-import org.openflexo.pamela.ModelContextLibrary;
+import org.openflexo.pamela.PamelaMetaModelLibrary;
 import org.openflexo.pamela.converter.RelativePathResourceConverter;
 import org.openflexo.pamela.exceptions.ModelDefinitionException;
 import org.openflexo.pamela.factory.EditingContext;
-import org.openflexo.pamela.factory.ModelFactory;
+import org.openflexo.pamela.factory.PamelaModelFactory;
 import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResource;
 
 /**
@@ -60,7 +60,7 @@ import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResource;
  * @author sylvain
  * 
  */
-public class PDFFactory extends ModelFactory implements PamelaResourceModelFactory<PDFDocumentResource> {
+public class PDFFactory extends PamelaModelFactory implements PamelaResourceModelFactory<PDFDocumentResource> {
 
 	private static final Logger logger = Logger.getLogger(PDFFactory.class.getPackage().getName());
 
@@ -71,7 +71,7 @@ public class PDFFactory extends ModelFactory implements PamelaResourceModelFacto
 	private RelativePathResourceConverter relativePathResourceConverter;
 
 	public PDFFactory(PDFDocumentResource resource, EditingContext editingContext) throws ModelDefinitionException {
-		super(ModelContextLibrary.getCompoundModelContext(PDFDocument.class));
+		super(PamelaMetaModelLibrary.getCompoundModelContext(PDFDocument.class));
 		this.resource = resource;
 		setEditingContext(editingContext);
 		addConverter(relativePathResourceConverter = new RelativePathResourceConverter(null));
