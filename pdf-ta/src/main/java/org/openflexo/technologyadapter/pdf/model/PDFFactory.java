@@ -71,7 +71,7 @@ public class PDFFactory extends PamelaModelFactory implements PamelaResourceMode
 	private RelativePathResourceConverter relativePathResourceConverter;
 
 	public PDFFactory(PDFDocumentResource resource, EditingContext editingContext) throws ModelDefinitionException {
-		super(PamelaMetaModelLibrary.getCompoundModelContext(PDFDocument.class));
+		super(PamelaMetaModelLibrary.retrieveMetaModel(PDFDocument.class));
 		this.resource = resource;
 		setEditingContext(editingContext);
 		addConverter(relativePathResourceConverter = new RelativePathResourceConverter(null));
