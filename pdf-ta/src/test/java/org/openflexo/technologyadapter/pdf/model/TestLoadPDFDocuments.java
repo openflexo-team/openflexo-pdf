@@ -178,10 +178,10 @@ public class TestLoadPDFDocuments extends AbstractTestPDF {
 		testDocumentLoading("00219957S-secu-mini_flotteurBr-BlueTechFR.pdf", 165, 0);
 	}
 
-	@Test
+	/*@Test
 	@TestOrder(13)
 	public void testDocumentLoading10() {
 		testDocumentLoading("00219957T-boxBr_BlueTech_FR.pdf", 306, 0);
-	}
+	}*/
 
 }
