@@ -13,3 +13,4 @@
 .gradle/
 /.DS_Store
 **/out/
+.java-version
