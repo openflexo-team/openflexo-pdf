@@ -29,6 +29,7 @@ import org.openflexo.pamela.annotations.ImplementationClass;
 import org.openflexo.pamela.annotations.ModelEntity;
 import org.openflexo.pamela.annotations.XMLElement;
 import org.openflexo.technologyadapter.pdf.model.PDFDocument;
+import org.openflexo.technologyadapter.pdf.rm.PDFDocumentResource;
 
 /**
  * Implementation of the ModelSlot class for the PDF technology adapter<br>
@@ -41,10 +42,10 @@ import org.openflexo.technologyadapter.pdf.model.PDFDocument;
 @ModelEntity
 @ImplementationClass(PDFModelSlot.PDFModelSlotImpl.class)
 @XMLElement
-public interface PDFModelSlot extends FreeModelSlot<PDFDocument> {
+public interface PDFModelSlot extends FreeModelSlot<PDFDocument, PDFDocumentResource> {
 
 	// Implem
-	public static abstract class PDFModelSlotImpl extends FreeModelSlotImpl<PDFDocument> implements PDFModelSlot {
+	public static abstract class PDFModelSlotImpl extends FreeModelSlotImpl<PDFDocument, PDFDocumentResource> implements PDFModelSlot {
 
 		@SuppressWarnings("unused")
 		private static final Logger logger = Logger.getLogger(PDFModelSlot.class.getPackage().getName());
