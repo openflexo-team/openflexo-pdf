@@ -91,7 +91,8 @@ public class PDFTechnologyAdapter extends TechnologyAdapter<PDFTechnologyAdapter
 		PDFDocumentRepository<I> returned = resourceCenter.retrieveRepository(PDFDocumentRepository.class, this);
 		if (returned == null) {
 			returned = PDFDocumentRepository.instanciateNewRepository(this, resourceCenter);
-			resourceCenter.registerRepository(returned, PDFDocumentRepository.class, this);
+			// Another thread may have registered one meanwhile: use the registered one (CORE-D-25)
+			returned = resourceCenter.registerRepository(returned, PDFDocumentRepository.class, this);
 		}
 		return returned;
 	}
