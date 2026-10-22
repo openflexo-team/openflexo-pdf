@@ -3,7 +3,7 @@ dependencies {
   implementation flexoFoundation()
   implementation flexoDocumentation()
   // external dep
-  implementation 'org.apache.pdfbox:pdfbox:2.0.2'
+  implementation 'org.apache.pdfbox:pdfbox:2.0.37'
   implementation commonsIo()
   runtimeOnly 'jaxen:jaxen:1.2.0-atlassian-2'
   // testing dep

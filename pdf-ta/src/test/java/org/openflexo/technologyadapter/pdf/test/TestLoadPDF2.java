@@ -47,7 +47,9 @@ public class TestLoadPDF2 extends AbstractTestPDF {
 			System.out.println("metadata= " + catalog.getMetadata());
 			System.out.println("outline= " + catalog.getDocumentOutline());
 
-			try (COSDocument cosDocument = document.getDocument()) {
+			// The COSDocument belongs to the PDDocument: it must not be closed here (pdfbox 2.0.x refuses to read a closed one)
+			{
+				COSDocument cosDocument = document.getDocument();
 				System.out.println("cosDocument=" + cosDocument);
 
 				for (COSObject obj : cosDocument.getObjects()) {
