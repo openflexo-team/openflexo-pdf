@@ -358,12 +358,6 @@ public interface PDFDocumentPage extends TechnologyObject<PDFTechnologyAdapter>,
 			return true;
 		}
 
-		@Override
-		protected void finalize() throws Throwable {
-			System.out.println("************************************** PDFPageImp has been cleaned / GC.. ********************");
-			super.finalize();
-		}
-
 	}
 
 }

@@ -80,13 +80,6 @@ public class PDFDocumentModuleView extends JTabbedPane implements ModuleView<PDF
 	}
 
 	@Override
-	public void finalize() throws Throwable {
-		System.out.println("************************************** PDFDocumentModuleView has been cleaned / GC.. ********************");
-		logger.warning("PDFDocumentModuleView has been garbage collected");
-		super.finalize();
-	}
-
-	@Override
 	public PDFDocument getRepresentedObject() {
 		return pdfDocument;
 	}

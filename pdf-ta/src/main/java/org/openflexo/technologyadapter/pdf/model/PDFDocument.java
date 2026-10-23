@@ -236,11 +236,6 @@ public interface PDFDocument extends TechnologyObject<PDFTechnologyAdapter>, Res
 			}
 		}
 
-		@Override
-		public void finalize() {
-			logger.warning("PDFDocument has been garbage collected");
-		}
-
 	}
 
 }

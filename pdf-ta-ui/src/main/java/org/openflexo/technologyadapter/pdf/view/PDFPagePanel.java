@@ -72,11 +72,6 @@ public class PDFPagePanel extends JPanel {
 		controller.delete(); // controllers delete drawingView & drawing
 	}
 
-	@Override
-	public void finalize() {
-		logger.warning("PDFPagePanel has been garbage collected");
-	}
-
 	public static class PDFPageDrawingController extends JDianaInteractiveEditor<PDFDocumentPage> {
 		private final PDFPagePanel panel;
 		private final JPopupMenu contextualMenu;
