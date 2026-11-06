@@ -1,1 +1,5 @@
+extract_images=Extract images
+extract_text=Extract text
 loading=Loading
+processing_page=Processing page
+processing_renderer=Processing renderer

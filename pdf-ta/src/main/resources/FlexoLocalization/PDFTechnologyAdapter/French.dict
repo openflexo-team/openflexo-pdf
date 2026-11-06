@@ -1,1 +1,5 @@
+extract_images=extract_images
+extract_text=extract_text
 loading=Chargement de
+processing_page=processing_page
+processing_renderer=processing_renderer
