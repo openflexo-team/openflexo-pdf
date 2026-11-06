@@ -1,5 +1,5 @@
-extract_images=extract_images
-extract_text=extract_text
+extract_images=Extraire les images
+extract_text=Extraire le texte
 loading=Chargement de
-processing_page=processing_page
-processing_renderer=processing_renderer
+processing_page=Traitement de la page
+processing_renderer=Traitement du moteur de rendu
