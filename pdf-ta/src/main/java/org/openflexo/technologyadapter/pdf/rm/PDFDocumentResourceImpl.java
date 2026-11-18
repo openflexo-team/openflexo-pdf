@@ -29,7 +29,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
-import org.openflexo.foundation.FlexoException;
+import org.openflexo.foundation.OpenflexoRuntimeException;
 import org.openflexo.foundation.resource.FileIODelegate;
 import org.openflexo.foundation.resource.FileWritingLock;
 import org.openflexo.foundation.resource.PamelaResourceImpl;
@@ -47,7 +47,7 @@ public abstract class PDFDocumentResourceImpl extends PamelaResourceImpl<PDFDocu
 	protected PDFDocument performLoad() throws IOException, Exception {
 
 		if (getFlexoIOStreamDelegate() == null) {
-			throw new FlexoException("Cannot load PDF document with this IO/delegate: " + getIODelegate());
+			throw new OpenflexoRuntimeException("Cannot load PDF document with this IO/delegate: " + getIODelegate());
 		}
 
 		Progress.progress(getLocales().localizedForKey("loading") + " " + getIODelegate().getSerializationArtefact());
@@ -140,7 +140,7 @@ public abstract class PDFDocumentResourceImpl extends PamelaResourceImpl<PDFDocu
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return null;
-		} catch (FlexoException e) {
+		} catch (OpenflexoRuntimeException e) {
 			e.printStackTrace();
 		}
 		return null;

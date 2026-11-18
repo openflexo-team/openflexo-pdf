@@ -94,7 +94,7 @@ public class TestLoadPDFDocuments extends AbstractTestPDF {
 				 *  e.printStackTrace(); } catch
 				 * (ResourceLoadingCancelledException e) { 
 				 *  e.printStackTrace(); } catch
-				 * (FlexoException e) { 
+				 * (OpenflexoRuntimeException e) { 
 				 * e.printStackTrace(); }
 				 * assertNotNull(docResource.getLoadedResourceData());
 				 * System.out.println("URI of document: " +
